@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Flex,
   Heading,
   HStack,
   Image,
@@ -23,24 +22,38 @@ import { TrustedBy } from "../utils/TrustedBy";
 import phone from "../images/phone.png";
 import Footer from "../component/Footer/Footer";
 
+let count = 100;
+
 const Home = () => {
   return (
     <>
       <Banner />
       <VStack
         id="product"
-        py="50px"
+        py="100px"
         px={8}
         overflow={"hidden"}
         maxW="1400px"
         m="0 auto"
         as="section"
       >
-        <Text fontSize={{ base: "1rem", sm: "1.5rem" }}>Trusted by</Text>
+        <Text data-aos="zoom-in" fontSize={{ base: "1rem", sm: "1.5rem" }}>
+          Trusted by
+        </Text>
         <SimpleGrid gridGap={4} w="full" columns={[2, 3, 4]}>
-          {TrustedBy.map((trust, index) => (
-            <Image h="70px" key={index} src={trust.img} alt={trust.img} />
-          ))}
+          {TrustedBy.map((trust, index) => {
+            count += 100;
+            return (
+              <Image
+                data-aos="fade-up"
+                data-aos-delay={count}
+                h="70px"
+                key={index}
+                src={trust.img}
+                alt={trust.img}
+              />
+            );
+          })}
         </SimpleGrid>
       </VStack>
 
@@ -57,6 +70,7 @@ const Home = () => {
       >
         <VStack w="full" h="full" spacing={8} maxW={"1400px"} m="0 auto" px="4">
           <Text
+            data-aos="fade-down"
             textAlign="center"
             fontSize={{ base: "1.2rem", sm: "24px" }}
             color="brandBlue.200"
@@ -65,12 +79,13 @@ const Home = () => {
           </Text>
           <Heading
             textAlign="center"
+            data-aos="fade-up"
             fontWeight="600"
             fontSize={{ base: "1.5rem", sm: "48px" }}
           >
             Designed with developers in mind
           </Heading>
-          <Text w="full" maxWidth="900px">
+          <Text data-aos="zoom-in" w="full" maxWidth="900px">
             We are building a product that allows customers to link all their
             bank or financial accounts and bio data in one place. Hence, we help
             boost business operations by getting a full KYC profile for an
@@ -80,6 +95,7 @@ const Home = () => {
           </Text>
           <HStack>
             <Button
+              data-aos="fade-right"
               fontWeight="700"
               p={{ base: "1rem", sm: "30px" }}
               fontSize={{ base: "1rem", sm: "24px" }}
@@ -90,6 +106,7 @@ const Home = () => {
             </Button>
             <Spacer />
             <Button
+              data-aos="fade-left"
               colorScheme={"white"}
               fontWeight="700"
               fontSize={{ base: "1rem", sm: "24px" }}

@@ -11,7 +11,10 @@ import { BrowserRouter } from "react-router-dom";
 
 //aos library
 import AOS from "aos";
-AOS.init();
+import "aos/dist/aos.css";
+AOS.init({
+  duration: 1000,
+});
 
 ReactDOM.render(
   <React.StrictMode>

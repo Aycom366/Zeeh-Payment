@@ -5,7 +5,6 @@ import {
   Image,
   Link,
   SimpleGrid,
-  Spacer,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -19,11 +18,12 @@ import { FooterItems } from "../../utils/FooterItems";
 import FooterSection from "./FooterSection";
 
 const Footer = () => {
+  let sectionDelay = 100;
   return (
     <Box overflow={"hidden"} w="full" m="0 auto" maxW="1400px" px="8">
       <VStack>
         <SimpleGrid gridGap={4} py="50px" w="full" columns={[2, 3, 3, 5]}>
-          <VStack alignItems={"flex-start"}>
+          <VStack w="full" data-aos="fade-up" alignItems={"flex-start"}>
             <Box w="136px" h="107px">
               <Image
                 src={logo}
@@ -34,17 +34,24 @@ const Footer = () => {
               />
             </Box>
             {/* <Spacer /> */}
-            <Link as={RouterLink} to="3">
+            <Link as={RouterLink} to="#">
               Privacy - Terms
             </Link>
           </VStack>
-          {FooterItems.map((footerItem, index) => (
-            <FooterSection
-              key={index}
-              HeaderText={footerItem.HeaderText}
-              links={footerItem.links}
-            />
-          ))}
+          {FooterItems.map((footerItem, index) => {
+            sectionDelay += 100;
+            return (
+              <FooterSection
+                w="full"
+                data-aos="fade-up"
+                sectionDelay={sectionDelay}
+                data-aos-delay={sectionDelay}
+                key={index}
+                HeaderText={footerItem.HeaderText}
+                links={footerItem.links}
+              />
+            );
+          })}
         </SimpleGrid>
         <Flex
           py="20px"

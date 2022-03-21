@@ -4,7 +4,7 @@ import { Flex, ListItem, UnorderedList } from "@chakra-ui/react";
 import { TabValues } from "../../utils/Tab";
 import Authentication from "../TabsChildren/Authentication";
 import Finance from "../TabsChildren/Finance";
-import React, { useState } from "react";
+import { useState } from "react";
 import { MotionFlex } from "../Framer/Index";
 import { AnimatePresence } from "framer-motion";
 
@@ -18,7 +18,14 @@ const FutureOfFinance = () => {
       HeaderText="create a foundation for the future of finance"
       text="With Zeeh, you have access to several amazing features"
     >
-      <Flex as="nav" justifyContent="space-between" mt={8} w="full">
+      <Flex
+        data-aos="zoom-in"
+        data-aos-delay="200"
+        as="nav"
+        justifyContent="space-between"
+        mt={8}
+        w="full"
+      >
         <UnorderedList overflowX={"auto"}>
           {TabValues.map((tab) => (
             <ListItem

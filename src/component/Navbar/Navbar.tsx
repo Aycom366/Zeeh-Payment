@@ -8,13 +8,11 @@ import logo from "../../images/Logo.png";
 //react icons
 import { FaBars, FaTimes } from "react-icons/fa";
 
-//router
-import { HashLink as RouteLink } from "react-router-hash-link";
-
 //framer
 import { MotionFlex } from "../Framer/Index";
 import { AnimatePresence } from "framer-motion";
 import { navVariants } from "../Framer/Variants";
+
 import { NavLinks } from "./NavLinks";
 
 const Navbar = () => {
@@ -42,7 +40,7 @@ const Navbar = () => {
       >
         {/* logo and mobile toggler */}
         <Flex justifyContent="space-between" w={["full", "full", "auto"]}>
-          <Box>
+          <Link href="#home">
             <Image
               w="full"
               h="full"
@@ -50,7 +48,7 @@ const Navbar = () => {
               src={logo}
               alt="ZEEH AFRICA"
             />
-          </Box>
+          </Link>
           <IconButton
             d={["flex", "flex", "none"]}
             size="sm"
@@ -71,7 +69,7 @@ const Navbar = () => {
           d={["none", "none", "flex"]}
         >
           {NavLinks.map((link, index) => (
-            <Link key={index} as={RouteLink} to={link.url} smooth>
+            <Link key={index} href={link.url}>
               {link.label}
             </Link>
           ))}
@@ -100,9 +98,7 @@ const Navbar = () => {
                   key={index}
                   onClick={() => setIsNavOpen(false)}
                   mb="0.5rem"
-                  as={RouteLink}
-                  to={link.url}
-                  smooth
+                  href={link.url}
                 >
                   {link.label}
                 </Link>

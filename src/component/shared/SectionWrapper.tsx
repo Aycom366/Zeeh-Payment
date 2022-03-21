@@ -38,8 +38,12 @@ const SectionWrapper = ({
         m="0 auto"
         px="8"
       >
-        <Heading textAlign="center">{HeaderText}</Heading>
+        <Heading data-aos="zoom-in" textAlign="center">
+          {HeaderText}
+        </Heading>
         <Text
+          data-aos="zoom-in"
+          data-aos-delay="100"
           textAlign="center"
           fontWeight={300}
           fontSize={textSize ? textSize : { base: "1.25rem", sm: "36px" }}

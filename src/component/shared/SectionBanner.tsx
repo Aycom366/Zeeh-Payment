@@ -65,12 +65,25 @@ const SectionBanner = ({
               maxW="600px"
               spacing={{ base: 4, sm: 8 }}
             >
-              <Heading fontSize={{ base: "1.5rem", sm: "24px" }} as="h3">
+              <Heading
+                data-aos="fade-right"
+                data-aos-delay="200"
+                fontSize={{ base: "1.5rem", sm: "24px" }}
+                as="h3"
+              >
                 {headerText}
               </Heading>
-              <Text fontSize={{ base: "1rem", sm: "24px" }}>{sectionText}</Text>
+              <Text
+                data-aos="fade-right"
+                data-aos-delay="300"
+                fontSize={{ base: "1rem", sm: "24px" }}
+              >
+                {sectionText}
+              </Text>
               {isButton ? (
                 <Button
+                  data-aos="fade-right"
+                  data-aos-delay="300"
                   rightIcon={<IoIosArrowRoundForward />}
                   color="brandBlue.200"
                   variant={"ghost"}
@@ -79,6 +92,8 @@ const SectionBanner = ({
                 </Button>
               ) : (
                 <Flex
+                  data-aos="fade-right"
+                  data-aos-delay="300"
                   border="1px solid"
                   borderColor={"#B2B2B2"}
                   w="full"
@@ -107,7 +122,11 @@ const SectionBanner = ({
             </VStack>
           </Box>
 
-          <Box flex={{ base: 1, sm: 5 }}>
+          <Box
+            data-aos="fade-left"
+            data-aos-delay="200"
+            flex={{ base: 1, sm: 5 }}
+          >
             <Image
               h="full"
               w="full"

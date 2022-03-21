@@ -16,6 +16,7 @@ import mockup from "../../images/Mockups.png";
 const Banner = () => {
   return (
     <Box
+      id="home"
       h={["full", "full", "80vh"]}
       w="full"
       bg="brandPink.100"
@@ -32,7 +33,7 @@ const Banner = () => {
           flexDirection={["column", "column", "row"]}
         >
           <VStack
-            data-aos="fade-right"
+            data-aos="fade-right" //strange it doesnt work, it must be vite issues
             mb={["2rem", "2rem", 0]}
             flex={[1, 1, 7]}
             w="full"
