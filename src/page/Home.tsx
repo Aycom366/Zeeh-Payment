@@ -22,12 +22,14 @@ import { TrustedBy } from "../utils/TrustedBy";
 import phone from "../images/phone.png";
 import Footer from "../component/Footer/Footer";
 
-let count = 100;
+let count = 100; //for aos delaying
 
 const Home = () => {
   return (
     <>
       <Banner />
+
+      {/* Trusted By sections */}
       <VStack
         id="product"
         py="100px"

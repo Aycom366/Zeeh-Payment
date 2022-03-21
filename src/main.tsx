@@ -12,6 +12,8 @@ import { BrowserRouter } from "react-router-dom";
 //aos library
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+//aos initialization
 AOS.init({
   duration: 1000,
 });
