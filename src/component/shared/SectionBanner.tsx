@@ -45,7 +45,7 @@ const SectionBanner = ({
       <Box
         h="full"
         px={isPadding ? "8" : "0"}
-        py={{ sm: "100px", md: "auto" }}
+        py={{ sm: "100px", md: "0" }}
         w="full"
         m="0 auto"
         maxW="1400px"

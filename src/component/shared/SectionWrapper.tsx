@@ -1,5 +1,4 @@
-import { Box, Flex, FlexProps, Heading, Text, VStack } from "@chakra-ui/react";
-import useWindowSize from "../../utils/useWindowSize";
+import { Box, Flex, FlexProps, Heading, Text } from "@chakra-ui/react";
 
 interface IProps extends FlexProps {
   children: React.ReactNode;
@@ -8,18 +7,29 @@ interface IProps extends FlexProps {
   text: string;
   swap?: boolean;
   textSize?: string;
+  id: string;
 }
+
 const SectionWrapper = ({
   children,
   bgColor,
   HeaderText,
   text,
   swap,
+  id,
   textSize,
   ...rest
 }: IProps) => {
   return (
-    <Box py="100px" bg={bgColor} w="full" h="full" {...rest}>
+    <Box
+      overflow={"hidden"}
+      py="100px"
+      bg={bgColor}
+      w="full"
+      h="full"
+      {...rest}
+      id={id}
+    >
       <Flex
         direction="column"
         w="full"
@@ -32,7 +42,7 @@ const SectionWrapper = ({
         <Text
           textAlign="center"
           fontWeight={300}
-          fontSize={textSize ? textSize : { base: "24px", sm: "36px" }}
+          fontSize={textSize ? textSize : { base: "1.25rem", sm: "36px" }}
         >
           {text}
         </Text>

@@ -3,7 +3,7 @@ import { createBreakpoints } from "@chakra-ui/theme-tools";
 
 //Update the breakpoints
 const breakpoints = createBreakpoints({
-  xs: "400px",
+  xs: "480px",
   sm: "600px",
   md: "768px",
   lg: "960px",
@@ -18,7 +18,14 @@ export const theme = extendTheme({
       "*,*::before,*::after": {
         scrollBehavior: "smooth",
       },
-      "ul li": { listStyleType: "none" },
+
+      "ul li": { listStyleType: "none", fontWeight: "500", fontSize: "14px" },
+
+      ul: {
+        display: "flex",
+        width: "full",
+      },
+
       "*:focus": { boxShadow: "none !important" },
     },
   },

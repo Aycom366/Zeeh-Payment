@@ -27,7 +27,15 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <VStack px={8} overflow={"hidden"} maxW="1400px" m="0 auto" as="section">
+      <VStack
+        id="product"
+        py="50px"
+        px={8}
+        overflow={"hidden"}
+        maxW="1400px"
+        m="0 auto"
+        as="section"
+      >
         <Text fontSize={{ base: "1rem", sm: "1.5rem" }}>Trusted by</Text>
         <SimpleGrid gridGap={4} w="full" columns={[2, 3, 4]}>
           {TrustedBy.map((trust, index) => (
@@ -35,10 +43,18 @@ const Home = () => {
           ))}
         </SimpleGrid>
       </VStack>
+
       <FutureOfFinance />
 
       {/* Developer experience */}
-      <Box overflow={"hidden"} py="100px" bg="brandBlue.100" w="full" h="full">
+      <Box
+        id="developers"
+        overflow={"hidden"}
+        py="100px"
+        bg="brandBlue.100"
+        w="full"
+        h="full"
+      >
         <VStack w="full" h="full" spacing={8} maxW={"1400px"} m="0 auto" px="4">
           <Text
             textAlign="center"

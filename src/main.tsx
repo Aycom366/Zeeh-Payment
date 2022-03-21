@@ -9,6 +9,10 @@ import { theme } from "./chakraTheme";
 //react router
 import { BrowserRouter } from "react-router-dom";
 
+//aos library
+import AOS from "aos";
+AOS.init();
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

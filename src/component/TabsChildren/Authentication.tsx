@@ -12,6 +12,7 @@ const Authentication = () => {
       HeaderSize="48px"
       sectionText="Customers can use their internet or mobile banking credentials to connect their bank accounts directly to financial applications, making onboarding faster and safer."
       isButton
+      isPadding
     />
   );
 };
